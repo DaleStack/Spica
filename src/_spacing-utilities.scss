@@ -1,10 +1,11 @@
 @use 'spacing' as *;
+@use 'breakpoints' as *;
 @use 'sass:string';
 
 @each $key, $value in $spica-spacing {
+  // Sanitize keys like 0.5 → 0_5
   $key-str: "#{$key}";
   $dot: string.index($key-str, ".");
-
   $safe-key: if(
     $dot,
     string.slice($key-str, 1, $dot - 1) + "_" + string.slice($key-str, $dot + 1),
@@ -28,5 +29,25 @@
   .mr-#{$safe-key} { margin-right: $value; }
   .mb-#{$safe-key} { margin-bottom: $value; }
   .ml-#{$safe-key} { margin-left: $value; }
-}
 
+  // Responsive variants
+  @each $breakpoint, $size in $spica-breakpoints {
+    @media (min-width: $size) {
+      .#{$breakpoint}\:p-#{$safe-key}  { padding: $value; }
+      .#{$breakpoint}\:px-#{$safe-key} { padding-left: $value; padding-right: $value; }
+      .#{$breakpoint}\:py-#{$safe-key} { padding-top: $value; padding-bottom: $value; }
+      .#{$breakpoint}\:pt-#{$safe-key} { padding-top: $value; }
+      .#{$breakpoint}\:pr-#{$safe-key} { padding-right: $value; }
+      .#{$breakpoint}\:pb-#{$safe-key} { padding-bottom: $value; }
+      .#{$breakpoint}\:pl-#{$safe-key} { padding-left: $value; }
+
+      .#{$breakpoint}\:m-#{$safe-key}  { margin: $value; }
+      .#{$breakpoint}\:mx-#{$safe-key} { margin-left: $value; margin-right: $value; }
+      .#{$breakpoint}\:my-#{$safe-key} { margin-top: $value; margin-bottom: $value; }
+      .#{$breakpoint}\:mt-#{$safe-key} { margin-top: $value; }
+      .#{$breakpoint}\:mr-#{$safe-key} { margin-right: $value; }
+      .#{$breakpoint}\:mb-#{$safe-key} { margin-bottom: $value; }
+      .#{$breakpoint}\:ml-#{$safe-key} { margin-left: $value; }
+    }
+  }
+}

@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Spica Test Page</title>
-  <link rel="stylesheet" href="dist/spica.css">
-  <style>
-    body {
-      font-family: sans-serif;
-      padding: 2rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/spica.css">
+    <title>Document</title>
 </head>
 <body>
-  <h1 class="text-blue-500">Spica Color Utilities</h1>
 
-  
-  <div class="bg-gray-500">
-    <p>test for white</p>
-    <p class="text-red-400">Test for red</p>
+    <div class="debug bg-black md:bg-blue-300 p-4 text-white">
+  <p>Should be black, then blue on small screens (640px+)</p>
+</div>
 
-  </div>
+<div class="bg-red-500 md:bg-green-500 lg:bg-yellow-200">
+    hahahaha
+</div>
 
-  <div class="bg-black text-white mt-">
-    <p class="">Test padding and margin</p>
-  </div>
+<div class="bg-black text-white p-4 md:p-20 lg:p-40">
+    hahahahaha
+</div>
+
+<p>Current window width: <span id="width"></span>px</p>
+
+<script>
+function updateWidth() {
+  document.getElementById('width').textContent = window.innerWidth;
+}
+updateWidth();
+window.addEventListener('resize', updateWidth);
+</script>
+    
 </body>
 </html>

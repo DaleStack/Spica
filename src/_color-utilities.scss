@@ -1,23 +1,63 @@
 @use 'colors' as *;
+@use 'breakpoints' as *;
 @use 'sass:meta';
 
+// Generate color utilities
 @each $name, $shades in $spica-colors {
   @if meta.type-of($shades) == "map" {
+    // Handle nested color maps (blue, red, etc.)
     @each $shade, $value in $shades {
-      .bg-#{"#{$name}"}-#{$shade} {
-        background-color: #{$value};
+      // Base classes
+      .bg-#{"" + $name}-#{$shade} { 
+        background-color: #{$value}; 
       }
-      .text-#{"#{$name}"}-#{$shade} {
-        color: #{$value};
+      .text-#{"" + $name}-#{$shade} { 
+        color: #{$value}; 
+      }
+      .border-#{"" + $name}-#{$shade} { 
+        border-color: #{$value}; 
+      }
+
+      // Responsive variants
+      @each $bp, $size in $spica-breakpoints {
+        @media (min-width: #{$size}) {
+          .#{$bp}\:bg-#{"" + $name}-#{$shade} { 
+            background-color: #{$value}; 
+          }
+          .#{$bp}\:text-#{"" + $name}-#{$shade} { 
+            color: #{$value}; 
+          }
+          .#{$bp}\:border-#{"" + $name}-#{$shade} { 
+            border-color: #{$value}; 
+          }
+        }
       }
     }
   } @else {
-    .bg-#{"#{$name}"} {
-      background-color: #{$shades};
+    // Handle flat colors (white, black)
+    .bg-#{"" + $name} { 
+      background-color: #{$shades}; 
     }
-    .text-#{"#{$name}"} {
-      color: #{$shades};
+    .text-#{"" + $name} { 
+      color: #{$shades}; 
+    }
+    .border-#{"" + $name} { 
+      border-color: #{$shades}; 
+    }
+
+    // Responsive variants for flat colors
+    @each $bp, $size in $spica-breakpoints {
+      @media (min-width: #{$size}) {
+        .#{$bp}\:bg-#{"" + $name} { 
+          background-color: #{$shades}; 
+        }
+        .#{$bp}\:text-#{"" + $name} { 
+          color: #{$shades}; 
+        }
+        .#{$bp}\:border-#{"" + $name} { 
+          border-color: #{$shades}; 
+        }
+      }
     }
   }
 }
-
