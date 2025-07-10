@@ -1,0 +1,15 @@
+@use 'colors' as *;
+
+@each $name, $shades in $spica-colors {
+  @each $shade, $value in $shades {
+    // 🌌 Background color utility
+    .bg-#{"#{$name}"}-#{$shade} {
+  background-color: #{$value};
+}
+
+    .text-#{"#{$name}"}-#{$shade} {
+    color: #{$value};
+    }
+
+  }
+}
