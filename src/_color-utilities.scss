@@ -1,15 +1,23 @@
 @use 'colors' as *;
+@use 'sass:meta';
 
 @each $name, $shades in $spica-colors {
-  @each $shade, $value in $shades {
-    // 🌌 Background color utility
-    .bg-#{"#{$name}"}-#{$shade} {
-  background-color: #{$value};
-}
-
-    .text-#{"#{$name}"}-#{$shade} {
-    color: #{$value};
+  @if meta.type-of($shades) == "map" {
+    @each $shade, $value in $shades {
+      .bg-#{"#{$name}"}-#{$shade} {
+        background-color: #{$value};
+      }
+      .text-#{"#{$name}"}-#{$shade} {
+        color: #{$value};
+      }
     }
-
+  } @else {
+    .bg-#{"#{$name}"} {
+      background-color: #{$shades};
+    }
+    .text-#{"#{$name}"} {
+      color: #{$shades};
+    }
   }
 }
+
