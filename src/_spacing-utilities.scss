@@ -1,21 +1,32 @@
 @use 'spacing' as *;
+@use 'sass:string';
 
 @each $key, $value in $spica-spacing {
+  $key-str: "#{$key}";
+  $dot: string.index($key-str, ".");
+
+  $safe-key: if(
+    $dot,
+    string.slice($key-str, 1, $dot - 1) + "_" + string.slice($key-str, $dot + 1),
+    $key-str
+  );
+
   // Padding
-  .p-#{$key}  { padding: $value; }
-  .px-#{$key} { padding-left: $value; padding-right: $value; }
-  .py-#{$key} { padding-top: $value; padding-bottom: $value; }
-  .pt-#{$key} { padding-top: $value; }
-  .pr-#{$key} { padding-right: $value; }
-  .pb-#{$key} { padding-bottom: $value; }
-  .pl-#{$key} { padding-left: $value; }
+  .p-#{$safe-key}  { padding: $value; }
+  .px-#{$safe-key} { padding-left: $value; padding-right: $value; }
+  .py-#{$safe-key} { padding-top: $value; padding-bottom: $value; }
+  .pt-#{$safe-key} { padding-top: $value; }
+  .pr-#{$safe-key} { padding-right: $value; }
+  .pb-#{$safe-key} { padding-bottom: $value; }
+  .pl-#{$safe-key} { padding-left: $value; }
 
   // Margin
-  .m-#{$key}  { margin: $value; }
-  .mx-#{$key} { margin-left: $value; margin-right: $value; }
-  .my-#{$key} { margin-top: $value; margin-bottom: $value; }
-  .mt-#{$key} { margin-top: $value; }
-  .mr-#{$key} { margin-right: $value; }
-  .mb-#{$key} { margin-bottom: $value; }
-  .ml-#{$key} { margin-left: $value; }
+  .m-#{$safe-key}  { margin: $value; }
+  .mx-#{$safe-key} { margin-left: $value; margin-right: $value; }
+  .my-#{$safe-key} { margin-top: $value; margin-bottom: $value; }
+  .mt-#{$safe-key} { margin-top: $value; }
+  .mr-#{$safe-key} { margin-right: $value; }
+  .mb-#{$safe-key} { margin-bottom: $value; }
+  .ml-#{$safe-key} { margin-left: $value; }
 }
+
