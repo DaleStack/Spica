@@ -1,0 +1,28 @@
+@use 'breakpoints' as *;
+
+$spica-display: (
+  hidden: none,
+  block: block,
+  inline: inline,
+  inline-block: inline-block,
+  flex: flex,
+  grid: grid
+);
+
+// Base visibility classes
+@each $label, $value in $spica-display {
+  .#{$label} {
+    display: $value;
+  }
+}
+
+// Responsive variants
+@each $bp, $size in $spica-breakpoints {
+  @media (min-width: $size) {
+    @each $label, $value in $spica-display {
+      .#{$bp}\:#{$label} {
+        display: $value;
+      }
+    }
+  }
+}

@@ -8,22 +8,12 @@
 </head>
 <body class="m-0">
 
-<div class="bg-black md:bg-blue-400 lg:bg-red-400 text-white p-4">
-  Responsive color block
+<div class="bg-black text-white p-2">
+  <p class="md:hidden">Nav bar for small screens</p>
+  <p class="hidden md:block lg:hidden">Nav bar for medium screens</p>
+  <p class="hidden lg:block">Nav bar for large screens</p>
 </div>
 
-<div class="bg-black hover:bg-yellow-200 transition-all duration-300">
-  Hover over me to cahnge color smoothly
-</div>
-
-<div class="bg-black hover:bg-yellow-200 hover:p-8 transition-all duration-300">
-  Hover over me to cahnge padding smoothly
-</div>
-
-<button class="focus:bg-red-400 hover:p-8 transition-all duration-200">Test for focus</button>
-
-
-<input type="text" class="focus:bg-red-500">
 
 <p>Current window width: <span id="width"></span>px</p>
 
