@@ -1,38 +1,42 @@
 # 🌌 Spica CSS Framework
 
-**Spica** is a responsive-first CSS utility framework built with Sass. It provides modular, breakpoint-aware utilities for color, spacing, and layout control—crafted to be scalable, predictable, and developer-friendly.
+**Spica** is a responsive-first CSS utility framework built with Sass. It provides modular, breakpoint-aware utilities for color, spacing, layout, and interaction control — crafted to be scalable, predictable, and developer-friendly.
 
 ---
 
 ## ✨ Features
 
 - **Responsive Color Utilities**  
-  Easily switch background and text colors across breakpoints using intuitive class names.
+  Apply background, text, and border colors across breakpoints using consistent class names.
+
+- **Interaction States**  
+  Built-in `hover:` and `focus:` support for color, spacing, and layout utilities.
 
 - **Spacing System**  
-  Utility classes for margin and padding with directional control (`mt-*`, `px-*`, etc.) and fractional values.
+  Directional padding and margin classes (`mt-*`, `px-*`) including fractional values (`p-0_5`, `m-1_25`).
+
+- **Transition Utilities**  
+  Utility classes for animations (`transition-all`, `duration-200`, `ease-in-out`).
 
 - **Breakpoint Engine**  
-  Customize breakpoint keys and generate variants like `sm:bg-*`, `md:mt-*`, etc.
+  Customizable keys for generating responsive variants (`sm:bg-*`, `lg:p-4`, `md:hover:m-2`).
 
-- **String-Safe Interpolation**  
-  Fractional spacing values like `0.5` are sanitized into safe class names (`mt-0_5`).
+- **Safe Class Interpolation**  
+  Fractional values are sanitized to avoid invalid CSS selectors.
 
-- **Debug Grid**  
-  Included HTML layout for previewing utilities across screen sizes.
+- **Modular Architecture**  
+  Utility layers organized into isolated Sass files (`_colors.scss`, `_spacing.scss`, `_interaction.scss`, etc.).
 
-- **Viewport Meta Compatibility**  
-  Ensures responsive behavior works correctly across all devices.
+- **Debug Grid & Meta Compatibility**  
+  Optional debug grid for visual testing and mobile-ready viewport setup.
 
 ---
 
 ## 🧪 Example
 
 ```html
-<div class="bg-black md:bg-blue-400 lg:bg-red-400 text-white p-4">
-  Responsive color block
+<div class="bg-blue-500 text-white hover:bg-blue-700 p-4 sm:hover:p-8 transition-spacing duration-300 ease-in-out">
+  Interactive utility block
 </div>
 
-<div class="mt-1 md:mt-4 lg:mt-8">
-  Responsive margin example
-</div>
+<input class="p-2 focus:p-4 transition-all duration-200 ease" />
