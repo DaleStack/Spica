@@ -1,0 +1,72 @@
+@use 'breakpoints' as *;
+@use 'sass:string';
+
+// Widths
+$spica-width: (
+  full: 100%,
+  screen: 100vw,
+  auto: auto,
+  min: min-content,
+  max: max-content,
+  fit: fit-content,
+  0: 0,
+  0.5: 0.125rem,
+  1: 0.25rem,
+  2: 0.5rem,
+  4: 1rem,
+  8: 2rem
+);
+
+// Heights
+$spica-height: (
+  full: 100%,
+  screen: 100vh,
+  auto: auto,
+  min: min-content,
+  max: max-content,
+  fit: fit-content,
+  0: 0,
+  0.5: 0.125rem,
+  1: 0.25rem,
+  2: 0.5rem,
+  4: 1rem,
+  8: 2rem
+);
+
+// Safe key generator
+@function spica-safe-key($key) {
+  $key-str: "#{$key}";
+  $dot: string.index($key-str, ".");
+  $key-safe: if(
+    $dot,
+    string.slice($key-str, 1, $dot - 1) + "_" + string.slice($key-str, $dot + 1),
+    $key-str
+  );
+  @return $key-safe;
+}
+
+// Base width classes
+@each $key, $value in $spica-width {
+  $safe: spica-safe-key($key);
+  .w-#{$safe} { width: $value; }
+}
+
+// Base height classes
+@each $key, $value in $spica-height {
+  $safe: spica-safe-key($key);
+  .h-#{$safe} { height: $value; }
+}
+
+// Responsive variants
+@each $bp, $size in $spica-breakpoints {
+  @media (min-width: $size) {
+    @each $key, $value in $spica-width {
+      $safe: spica-safe-key($key);
+      .#{$bp}\:w-#{$safe} { width: $value; }
+    }
+    @each $key, $value in $spica-height {
+      $safe: spica-safe-key($key);
+      .#{$bp}\:h-#{$safe} { height: $value; }
+    }
+  }
+}
