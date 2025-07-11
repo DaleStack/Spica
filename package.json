@@ -1,5 +1,10 @@
 {
+  "name": "spica-cdn",
+  "version": "1.0.0",
   "scripts": {
     "build": "sass src/spica.scss dist/spica.css"
+  },
+  "dependencies": {
+    "sass": "^1.73.0"
   }
 }
