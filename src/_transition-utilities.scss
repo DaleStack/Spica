@@ -1,0 +1,51 @@
+// Property sets
+$spica-transition-properties: (
+  all: all,
+  colors: (color, background-color, border-color, fill, stroke),
+  spacing: (padding, margin),
+  opacity: opacity,
+  transform: transform
+);
+
+
+// Durations (in ms)
+$spica-transition-durations: (
+  75: 75ms,
+  100: 100ms,
+  150: 150ms,
+  200: 200ms,
+  300: 300ms,
+  500: 500ms,
+  700: 700ms,
+  1000: 1000ms
+);
+
+// Timing functions
+$spica-easing: (
+  linear: linear,
+  ease: ease,
+  ease-in: ease-in,
+  ease-out: ease-out,
+  ease-in-out: ease-in-out
+);
+
+// Transition properties
+@each $name, $props in $spica-transition-properties {
+  .transition-#{"" + $name} {
+    transition-property: $props;
+  }
+}
+
+// Durations
+@each $ms, $val in $spica-transition-durations {
+  .duration-#{$ms} {
+    transition-duration: $val;
+  }
+}
+
+// Timing functions
+@each $label, $fn in $spica-easing {
+  .ease-#{"" + $label} {
+    transition-timing-function: $fn;
+  }
+}
