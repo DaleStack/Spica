@@ -29,10 +29,10 @@
 ## 🧪 Example
 
 ```html
-<div class="bg-black sm:bg-green-400 md:bg-blue-400 lg:bg-red-400 text-white p-4">
+<div class="bg-black md:bg-blue-400 lg:bg-red-400 text-white p-4">
   Responsive color block
 </div>
 
-<div class="mt-1 sm:mt-2 md:mt-4 lg:mt-8">
+<div class="mt-1 md:mt-4 lg:mt-8">
   Responsive margin example
 </div>
