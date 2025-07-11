@@ -32,11 +32,3 @@
 
 ---
 
-## 🧪 Example
-
-```html
-<div class="bg-blue-500 text-white hover:bg-blue-700 p-4 sm:hover:p-8 transition-spacing duration-300 ease-in-out">
-  Interactive utility block
-</div>
-
-<input class="p-2 focus:p-4 transition-all duration-200 ease" />
