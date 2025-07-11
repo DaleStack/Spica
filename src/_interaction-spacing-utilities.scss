@@ -1,0 +1,91 @@
+@use 'spacing' as *;
+@use 'breakpoints' as *;
+@use 'sass:string';
+
+// Define pseudo states
+$spica-states: (
+  hover: ":hover",
+  focus: ":focus"
+);
+
+// Padding
+@each $state-name, $pseudo in $spica-states {
+  @each $key, $value in $spica-spacing {
+    $key-str: "#{$key}";
+    $dot: string.index($key-str, ".");
+    $key-safe: if(
+      $dot,
+      string.slice($key-str, 1, $dot - 1) + "_" + string.slice($key-str, $dot + 1),
+      $key-str
+    );
+
+    .#{$state-name}\:p-#{$key-safe}#{$pseudo} {
+      padding: $value;
+    }
+    .#{$state-name}\:px-#{$key-safe}#{$pseudo} {
+      padding-left: $value;
+      padding-right: $value;
+    }
+    .#{$state-name}\:py-#{$key-safe}#{$pseudo} {
+      padding-top: $value;
+      padding-bottom: $value;
+    }
+
+    @each $bp, $size in $spica-breakpoints {
+      @media (min-width: $size) {
+        .#{$bp}\:#{$state-name}\:p-#{$key-safe}#{$pseudo} {
+          padding: $value;
+        }
+        .#{$bp}\:#{$state-name}\:px-#{$key-safe}#{$pseudo} {
+          padding-left: $value;
+          padding-right: $value;
+        }
+        .#{$bp}\:#{$state-name}\:py-#{$key-safe}#{$pseudo} {
+          padding-top: $value;
+          padding-bottom: $value;
+        }
+      }
+    }
+  }
+}
+
+// Margin (same slicing logic)
+@each $state-name, $pseudo in $spica-states {
+  @each $key, $value in $spica-spacing {
+    $key-str: "#{$key}";
+    $dot: string.index($key-str, ".");
+    $key-safe: if(
+      $dot,
+      string.slice($key-str, 1, $dot - 1) + "_" + string.slice($key-str, $dot + 1),
+      $key-str
+    );
+
+    .#{$state-name}\:m-#{$key-safe}#{$pseudo} {
+      margin: $value;
+    }
+    .#{$state-name}\:mx-#{$key-safe}#{$pseudo} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+    .#{$state-name}\:my-#{$key-safe}#{$pseudo} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+
+    @each $bp, $size in $spica-breakpoints {
+      @media (min-width: $size) {
+        .#{$bp}\:#{$state-name}\:m-#{$key-safe}#{$pseudo} {
+          margin: $value;
+        }
+        .#{$bp}\:#{$state-name}\:mx-#{$key-safe}#{$pseudo} {
+          margin-left: $value;
+          margin-right: $value;
+        }
+        .#{$bp}\:#{$state-name}\:my-#{$key-safe}#{$pseudo} {
+          margin-top: $value;
+          margin-bottom: $value;
+        }
+      }
+    }
+  }
+}
