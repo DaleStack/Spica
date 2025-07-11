@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "build": "sass src/spica.scss dist/spica.css"
+  }
+}
