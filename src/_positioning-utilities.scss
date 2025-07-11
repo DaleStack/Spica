@@ -1,0 +1,64 @@
+@use 'breakpoints' as *;
+@use 'sass:string';
+
+// Position types
+$spica-position: (
+  static: static,
+  relative: relative,
+  absolute: absolute,
+  fixed: fixed,
+  sticky: sticky
+);
+
+// Positional offsets
+$spica-offset: (
+  0: 0,
+  0.5: 0.125rem,
+  1: 0.25rem,
+  2: 0.5rem,
+  4: 1rem,
+  8: 2rem,
+  auto: auto
+);
+
+// Global function
+@function spica-safe-key($key) {
+  $key-str: "#{$key}";
+  $dot: string.index($key-str, ".");
+  $key-safe: if(
+    $dot,
+    string.slice($key-str, 1, $dot - 1) + "_" + string.slice($key-str, $dot + 1),
+    $key-str
+  );
+  @return $key-safe;
+}
+
+// Position classes
+@each $key, $val in $spica-position {
+  .#{$key} { position: $val; }
+}
+
+// Offset classes
+@each $key, $val in $spica-offset {
+  $safe: spica-safe-key($key);
+  .top-#{$safe} { top: $val; }
+  .left-#{$safe} { left: $val; }
+  .right-#{$safe} { right: $val; }
+  .bottom-#{$safe} { bottom: $val; }
+}
+
+// Responsive variants
+@each $bp, $size in $spica-breakpoints {
+  @media (min-width: $size) {
+    @each $key, $val in $spica-position {
+      .#{$bp}\:#{$key} { position: $val; }
+    }
+    @each $key, $val in $spica-offset {
+      $safe: spica-safe-key($key);
+      .#{$bp}\:top-#{$safe} { top: $val; }
+      .#{$bp}\:left-#{$safe} { left: $val; }
+      .#{$bp}\:right-#{$safe} { right: $val; }
+      .#{$bp}\:bottom-#{$safe} { bottom: $val; }
+    }
+  }
+}

@@ -33438,5 +33438,642 @@
     z-index: auto;
   }
 }
+.static {
+  position: static;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.top-0_5 {
+  top: 0.125rem;
+}
+
+.left-0_5 {
+  left: 0.125rem;
+}
+
+.right-0_5 {
+  right: 0.125rem;
+}
+
+.bottom-0_5 {
+  bottom: 0.125rem;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
+.left-1 {
+  left: 0.25rem;
+}
+
+.right-1 {
+  right: 0.25rem;
+}
+
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.left-2 {
+  left: 0.5rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
+.bottom-2 {
+  bottom: 0.5rem;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
+.left-4 {
+  left: 1rem;
+}
+
+.right-4 {
+  right: 1rem;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.top-8 {
+  top: 2rem;
+}
+
+.left-8 {
+  left: 2rem;
+}
+
+.right-8 {
+  right: 2rem;
+}
+
+.bottom-8 {
+  bottom: 2rem;
+}
+
+.top-auto {
+  top: auto;
+}
+
+.left-auto {
+  left: auto;
+}
+
+.right-auto {
+  right: auto;
+}
+
+.bottom-auto {
+  bottom: auto;
+}
+
+@media (min-width: 640px) {
+  .sm\:static {
+    position: static;
+  }
+  .sm\:relative {
+    position: relative;
+  }
+  .sm\:absolute {
+    position: absolute;
+  }
+  .sm\:fixed {
+    position: fixed;
+  }
+  .sm\:sticky {
+    position: sticky;
+  }
+  .sm\:top-0 {
+    top: 0;
+  }
+  .sm\:left-0 {
+    left: 0;
+  }
+  .sm\:right-0 {
+    right: 0;
+  }
+  .sm\:bottom-0 {
+    bottom: 0;
+  }
+  .sm\:top-0_5 {
+    top: 0.125rem;
+  }
+  .sm\:left-0_5 {
+    left: 0.125rem;
+  }
+  .sm\:right-0_5 {
+    right: 0.125rem;
+  }
+  .sm\:bottom-0_5 {
+    bottom: 0.125rem;
+  }
+  .sm\:top-1 {
+    top: 0.25rem;
+  }
+  .sm\:left-1 {
+    left: 0.25rem;
+  }
+  .sm\:right-1 {
+    right: 0.25rem;
+  }
+  .sm\:bottom-1 {
+    bottom: 0.25rem;
+  }
+  .sm\:top-2 {
+    top: 0.5rem;
+  }
+  .sm\:left-2 {
+    left: 0.5rem;
+  }
+  .sm\:right-2 {
+    right: 0.5rem;
+  }
+  .sm\:bottom-2 {
+    bottom: 0.5rem;
+  }
+  .sm\:top-4 {
+    top: 1rem;
+  }
+  .sm\:left-4 {
+    left: 1rem;
+  }
+  .sm\:right-4 {
+    right: 1rem;
+  }
+  .sm\:bottom-4 {
+    bottom: 1rem;
+  }
+  .sm\:top-8 {
+    top: 2rem;
+  }
+  .sm\:left-8 {
+    left: 2rem;
+  }
+  .sm\:right-8 {
+    right: 2rem;
+  }
+  .sm\:bottom-8 {
+    bottom: 2rem;
+  }
+  .sm\:top-auto {
+    top: auto;
+  }
+  .sm\:left-auto {
+    left: auto;
+  }
+  .sm\:right-auto {
+    right: auto;
+  }
+  .sm\:bottom-auto {
+    bottom: auto;
+  }
+}
+@media (min-width: 768px) {
+  .md\:static {
+    position: static;
+  }
+  .md\:relative {
+    position: relative;
+  }
+  .md\:absolute {
+    position: absolute;
+  }
+  .md\:fixed {
+    position: fixed;
+  }
+  .md\:sticky {
+    position: sticky;
+  }
+  .md\:top-0 {
+    top: 0;
+  }
+  .md\:left-0 {
+    left: 0;
+  }
+  .md\:right-0 {
+    right: 0;
+  }
+  .md\:bottom-0 {
+    bottom: 0;
+  }
+  .md\:top-0_5 {
+    top: 0.125rem;
+  }
+  .md\:left-0_5 {
+    left: 0.125rem;
+  }
+  .md\:right-0_5 {
+    right: 0.125rem;
+  }
+  .md\:bottom-0_5 {
+    bottom: 0.125rem;
+  }
+  .md\:top-1 {
+    top: 0.25rem;
+  }
+  .md\:left-1 {
+    left: 0.25rem;
+  }
+  .md\:right-1 {
+    right: 0.25rem;
+  }
+  .md\:bottom-1 {
+    bottom: 0.25rem;
+  }
+  .md\:top-2 {
+    top: 0.5rem;
+  }
+  .md\:left-2 {
+    left: 0.5rem;
+  }
+  .md\:right-2 {
+    right: 0.5rem;
+  }
+  .md\:bottom-2 {
+    bottom: 0.5rem;
+  }
+  .md\:top-4 {
+    top: 1rem;
+  }
+  .md\:left-4 {
+    left: 1rem;
+  }
+  .md\:right-4 {
+    right: 1rem;
+  }
+  .md\:bottom-4 {
+    bottom: 1rem;
+  }
+  .md\:top-8 {
+    top: 2rem;
+  }
+  .md\:left-8 {
+    left: 2rem;
+  }
+  .md\:right-8 {
+    right: 2rem;
+  }
+  .md\:bottom-8 {
+    bottom: 2rem;
+  }
+  .md\:top-auto {
+    top: auto;
+  }
+  .md\:left-auto {
+    left: auto;
+  }
+  .md\:right-auto {
+    right: auto;
+  }
+  .md\:bottom-auto {
+    bottom: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:static {
+    position: static;
+  }
+  .lg\:relative {
+    position: relative;
+  }
+  .lg\:absolute {
+    position: absolute;
+  }
+  .lg\:fixed {
+    position: fixed;
+  }
+  .lg\:sticky {
+    position: sticky;
+  }
+  .lg\:top-0 {
+    top: 0;
+  }
+  .lg\:left-0 {
+    left: 0;
+  }
+  .lg\:right-0 {
+    right: 0;
+  }
+  .lg\:bottom-0 {
+    bottom: 0;
+  }
+  .lg\:top-0_5 {
+    top: 0.125rem;
+  }
+  .lg\:left-0_5 {
+    left: 0.125rem;
+  }
+  .lg\:right-0_5 {
+    right: 0.125rem;
+  }
+  .lg\:bottom-0_5 {
+    bottom: 0.125rem;
+  }
+  .lg\:top-1 {
+    top: 0.25rem;
+  }
+  .lg\:left-1 {
+    left: 0.25rem;
+  }
+  .lg\:right-1 {
+    right: 0.25rem;
+  }
+  .lg\:bottom-1 {
+    bottom: 0.25rem;
+  }
+  .lg\:top-2 {
+    top: 0.5rem;
+  }
+  .lg\:left-2 {
+    left: 0.5rem;
+  }
+  .lg\:right-2 {
+    right: 0.5rem;
+  }
+  .lg\:bottom-2 {
+    bottom: 0.5rem;
+  }
+  .lg\:top-4 {
+    top: 1rem;
+  }
+  .lg\:left-4 {
+    left: 1rem;
+  }
+  .lg\:right-4 {
+    right: 1rem;
+  }
+  .lg\:bottom-4 {
+    bottom: 1rem;
+  }
+  .lg\:top-8 {
+    top: 2rem;
+  }
+  .lg\:left-8 {
+    left: 2rem;
+  }
+  .lg\:right-8 {
+    right: 2rem;
+  }
+  .lg\:bottom-8 {
+    bottom: 2rem;
+  }
+  .lg\:top-auto {
+    top: auto;
+  }
+  .lg\:left-auto {
+    left: auto;
+  }
+  .lg\:right-auto {
+    right: auto;
+  }
+  .lg\:bottom-auto {
+    bottom: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .xl\:static {
+    position: static;
+  }
+  .xl\:relative {
+    position: relative;
+  }
+  .xl\:absolute {
+    position: absolute;
+  }
+  .xl\:fixed {
+    position: fixed;
+  }
+  .xl\:sticky {
+    position: sticky;
+  }
+  .xl\:top-0 {
+    top: 0;
+  }
+  .xl\:left-0 {
+    left: 0;
+  }
+  .xl\:right-0 {
+    right: 0;
+  }
+  .xl\:bottom-0 {
+    bottom: 0;
+  }
+  .xl\:top-0_5 {
+    top: 0.125rem;
+  }
+  .xl\:left-0_5 {
+    left: 0.125rem;
+  }
+  .xl\:right-0_5 {
+    right: 0.125rem;
+  }
+  .xl\:bottom-0_5 {
+    bottom: 0.125rem;
+  }
+  .xl\:top-1 {
+    top: 0.25rem;
+  }
+  .xl\:left-1 {
+    left: 0.25rem;
+  }
+  .xl\:right-1 {
+    right: 0.25rem;
+  }
+  .xl\:bottom-1 {
+    bottom: 0.25rem;
+  }
+  .xl\:top-2 {
+    top: 0.5rem;
+  }
+  .xl\:left-2 {
+    left: 0.5rem;
+  }
+  .xl\:right-2 {
+    right: 0.5rem;
+  }
+  .xl\:bottom-2 {
+    bottom: 0.5rem;
+  }
+  .xl\:top-4 {
+    top: 1rem;
+  }
+  .xl\:left-4 {
+    left: 1rem;
+  }
+  .xl\:right-4 {
+    right: 1rem;
+  }
+  .xl\:bottom-4 {
+    bottom: 1rem;
+  }
+  .xl\:top-8 {
+    top: 2rem;
+  }
+  .xl\:left-8 {
+    left: 2rem;
+  }
+  .xl\:right-8 {
+    right: 2rem;
+  }
+  .xl\:bottom-8 {
+    bottom: 2rem;
+  }
+  .xl\:top-auto {
+    top: auto;
+  }
+  .xl\:left-auto {
+    left: auto;
+  }
+  .xl\:right-auto {
+    right: auto;
+  }
+  .xl\:bottom-auto {
+    bottom: auto;
+  }
+}
+@media (min-width: 1536px) {
+  .bp-2xl\:static {
+    position: static;
+  }
+  .bp-2xl\:relative {
+    position: relative;
+  }
+  .bp-2xl\:absolute {
+    position: absolute;
+  }
+  .bp-2xl\:fixed {
+    position: fixed;
+  }
+  .bp-2xl\:sticky {
+    position: sticky;
+  }
+  .bp-2xl\:top-0 {
+    top: 0;
+  }
+  .bp-2xl\:left-0 {
+    left: 0;
+  }
+  .bp-2xl\:right-0 {
+    right: 0;
+  }
+  .bp-2xl\:bottom-0 {
+    bottom: 0;
+  }
+  .bp-2xl\:top-0_5 {
+    top: 0.125rem;
+  }
+  .bp-2xl\:left-0_5 {
+    left: 0.125rem;
+  }
+  .bp-2xl\:right-0_5 {
+    right: 0.125rem;
+  }
+  .bp-2xl\:bottom-0_5 {
+    bottom: 0.125rem;
+  }
+  .bp-2xl\:top-1 {
+    top: 0.25rem;
+  }
+  .bp-2xl\:left-1 {
+    left: 0.25rem;
+  }
+  .bp-2xl\:right-1 {
+    right: 0.25rem;
+  }
+  .bp-2xl\:bottom-1 {
+    bottom: 0.25rem;
+  }
+  .bp-2xl\:top-2 {
+    top: 0.5rem;
+  }
+  .bp-2xl\:left-2 {
+    left: 0.5rem;
+  }
+  .bp-2xl\:right-2 {
+    right: 0.5rem;
+  }
+  .bp-2xl\:bottom-2 {
+    bottom: 0.5rem;
+  }
+  .bp-2xl\:top-4 {
+    top: 1rem;
+  }
+  .bp-2xl\:left-4 {
+    left: 1rem;
+  }
+  .bp-2xl\:right-4 {
+    right: 1rem;
+  }
+  .bp-2xl\:bottom-4 {
+    bottom: 1rem;
+  }
+  .bp-2xl\:top-8 {
+    top: 2rem;
+  }
+  .bp-2xl\:left-8 {
+    left: 2rem;
+  }
+  .bp-2xl\:right-8 {
+    right: 2rem;
+  }
+  .bp-2xl\:bottom-8 {
+    bottom: 2rem;
+  }
+  .bp-2xl\:top-auto {
+    top: auto;
+  }
+  .bp-2xl\:left-auto {
+    left: auto;
+  }
+  .bp-2xl\:right-auto {
+    right: auto;
+  }
+  .bp-2xl\:bottom-auto {
+    bottom: auto;
+  }
+}
 
 /*# sourceMappingURL=spica.css.map */
