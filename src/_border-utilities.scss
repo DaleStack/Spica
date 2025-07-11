@@ -1,0 +1,50 @@
+@use 'breakpoints' as *;
+
+// Border radius scale
+$spica-radius: (
+  none: 0,
+  sm: 0.125rem,
+  md: 0.375rem,
+  lg: 0.5rem,
+  xl: 0.75rem,
+  full: 9999px
+);
+
+// Outline utilities
+$spica-outline: (
+  none: none,
+  default: 2px solid currentColor
+);
+
+// Pseudo states
+$spica-states: (
+  hover: ":hover",
+  focus: ":focus"
+);
+
+// Border radius base classes
+@each $key, $val in $spica-radius {
+  .rounded-#{$key} {
+    border-radius: $val;
+  }
+}
+
+//  Interaction states
+@each $state, $pseudo in $spica-states {
+  @each $key, $val in $spica-radius {
+    .#{$state}\:rounded-#{$key}#{$pseudo} {
+      border-radius: $val;
+    }
+  }
+}
+
+//  Responsive variants
+@each $bp, $size in $spica-breakpoints {
+  @media (min-width: $size) {
+    @each $key, $val in $spica-radius {
+      .#{$bp}\:rounded-#{$key} {
+        border-radius: $val;
+      }
+    }
+  }
+}

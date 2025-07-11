@@ -1,0 +1,23 @@
+@use 'breakpoints' as *;
+
+$spica-outline: (
+  0: 0,
+  default: 2px solid currentColor
+);
+
+// Base outline classes
+@each $key, $val in $spica-outline {
+  .outline-#{$key} {
+    outline: $val;
+  }
+}
+
+// Focus states only (common for accessibility)
+@each $key, $val in $spica-outline {
+  .focus\:outline-#{$key}:focus {
+    outline: $val;
+  }
+}
+
+
+

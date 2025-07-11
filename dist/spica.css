@@ -34075,5 +34075,192 @@
     bottom: auto;
   }
 }
+.rounded-none {
+  border-radius: 0;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.hover\:rounded-none:hover {
+  border-radius: 0;
+}
+
+.hover\:rounded-sm:hover {
+  border-radius: 0.125rem;
+}
+
+.hover\:rounded-md:hover {
+  border-radius: 0.375rem;
+}
+
+.hover\:rounded-lg:hover {
+  border-radius: 0.5rem;
+}
+
+.hover\:rounded-xl:hover {
+  border-radius: 0.75rem;
+}
+
+.hover\:rounded-full:hover {
+  border-radius: 9999px;
+}
+
+.focus\:rounded-none:focus {
+  border-radius: 0;
+}
+
+.focus\:rounded-sm:focus {
+  border-radius: 0.125rem;
+}
+
+.focus\:rounded-md:focus {
+  border-radius: 0.375rem;
+}
+
+.focus\:rounded-lg:focus {
+  border-radius: 0.5rem;
+}
+
+.focus\:rounded-xl:focus {
+  border-radius: 0.75rem;
+}
+
+.focus\:rounded-full:focus {
+  border-radius: 9999px;
+}
+
+@media (min-width: 640px) {
+  .sm\:rounded-none {
+    border-radius: 0;
+  }
+  .sm\:rounded-sm {
+    border-radius: 0.125rem;
+  }
+  .sm\:rounded-md {
+    border-radius: 0.375rem;
+  }
+  .sm\:rounded-lg {
+    border-radius: 0.5rem;
+  }
+  .sm\:rounded-xl {
+    border-radius: 0.75rem;
+  }
+  .sm\:rounded-full {
+    border-radius: 9999px;
+  }
+}
+@media (min-width: 768px) {
+  .md\:rounded-none {
+    border-radius: 0;
+  }
+  .md\:rounded-sm {
+    border-radius: 0.125rem;
+  }
+  .md\:rounded-md {
+    border-radius: 0.375rem;
+  }
+  .md\:rounded-lg {
+    border-radius: 0.5rem;
+  }
+  .md\:rounded-xl {
+    border-radius: 0.75rem;
+  }
+  .md\:rounded-full {
+    border-radius: 9999px;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:rounded-none {
+    border-radius: 0;
+  }
+  .lg\:rounded-sm {
+    border-radius: 0.125rem;
+  }
+  .lg\:rounded-md {
+    border-radius: 0.375rem;
+  }
+  .lg\:rounded-lg {
+    border-radius: 0.5rem;
+  }
+  .lg\:rounded-xl {
+    border-radius: 0.75rem;
+  }
+  .lg\:rounded-full {
+    border-radius: 9999px;
+  }
+}
+@media (min-width: 1280px) {
+  .xl\:rounded-none {
+    border-radius: 0;
+  }
+  .xl\:rounded-sm {
+    border-radius: 0.125rem;
+  }
+  .xl\:rounded-md {
+    border-radius: 0.375rem;
+  }
+  .xl\:rounded-lg {
+    border-radius: 0.5rem;
+  }
+  .xl\:rounded-xl {
+    border-radius: 0.75rem;
+  }
+  .xl\:rounded-full {
+    border-radius: 9999px;
+  }
+}
+@media (min-width: 1536px) {
+  .bp-2xl\:rounded-none {
+    border-radius: 0;
+  }
+  .bp-2xl\:rounded-sm {
+    border-radius: 0.125rem;
+  }
+  .bp-2xl\:rounded-md {
+    border-radius: 0.375rem;
+  }
+  .bp-2xl\:rounded-lg {
+    border-radius: 0.5rem;
+  }
+  .bp-2xl\:rounded-xl {
+    border-radius: 0.75rem;
+  }
+  .bp-2xl\:rounded-full {
+    border-radius: 9999px;
+  }
+}
+.outline-0 {
+  outline: 0;
+}
+
+.outline-default {
+  outline: 2px solid currentColor;
+}
+
+.focus\:outline-0:focus {
+  outline: 0;
+}
+
+.focus\:outline-default:focus {
+  outline: 2px solid currentColor;
+}
 
 /*# sourceMappingURL=spica.css.map */
