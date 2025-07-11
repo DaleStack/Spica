@@ -8,22 +8,15 @@
 </head>
 <body class="m-0">
 
-<div class="bg-black text-white p-2">
-  <p class="md:hidden">Nav bar for small screens</p>
-  <p class="hidden md:block lg:hidden">Nav bar for medium screens</p>
-  <p class="hidden lg:block">Nav bar for large screens</p>
-</div>
+<nav class="bg-black p-2 text-white flex justify-between px-20 items-center">
+  <div>
+    <p>Logo</p>
+  </div>
 
-
-<p>Current window width: <span id="width"></span>px</p>
-
-<script>
-function updateWidth() {
-  document.getElementById('width').textContent = window.innerWidth;
-}
-updateWidth();
-window.addEventListener('resize', updateWidth);
-</script>
+  <div>
+    <p>Menu?</p>
+  </div>
+</nav>
     
 </body>
 </html>

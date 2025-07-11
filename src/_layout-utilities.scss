@@ -1,0 +1,66 @@
+@use 'breakpoints' as *;
+
+// Flex direction
+$spica-flex-direction: (
+  row: row,
+  row-reverse: row-reverse,
+  col: column,
+  col-reverse: column-reverse
+);
+
+// Flex wrap
+$spica-flex-wrap: (
+  wrap: wrap,
+  nowrap: nowrap,
+  wrap-reverse: wrap-reverse
+);
+
+// Justify content
+$spica-justify: (
+  start: flex-start,
+  center: center,
+  end: flex-end,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly
+);
+
+// Align items
+$spica-items: (
+  start: flex-start,
+  center: center,
+  end: flex-end,
+  stretch: stretch
+);
+
+// Base classes
+@each $key, $val in $spica-flex-direction {
+  .flex-#{$key} { flex-direction: $val; }
+}
+@each $key, $val in $spica-flex-wrap {
+  .flex-#{$key} { flex-wrap: $val; }
+}
+@each $key, $val in $spica-justify {
+  .justify-#{$key} { justify-content: $val; }
+}
+@each $key, $val in $spica-items {
+  .items-#{$key} { align-items: $val; }
+}
+
+// Responsive variants
+@each $bp, $size in $spica-breakpoints {
+  @media (min-width: $size) {
+    @each $key, $val in $spica-flex-direction {
+      .#{$bp}\:flex-#{$key} { flex-direction: $val; }
+    }
+    @each $key, $val in $spica-flex-wrap {
+      .#{$bp}\:flex-#{$key} { flex-wrap: $val; }
+    }
+    @each $key, $val in $spica-justify {
+      .#{$bp}\:justify-#{$key} { justify-content: $val; }
+    }
+    @each $key, $val in $spica-items {
+      .#{$bp}\:items-#{$key} { align-items: $val; }
+    }
+  }
+}
