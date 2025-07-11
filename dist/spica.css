@@ -33314,5 +33314,129 @@
     height: 2rem;
   }
 }
+.z-0 {
+  z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.z-100 {
+  z-index: 100;
+}
+
+.z-auto {
+  z-index: auto;
+}
+
+@media (min-width: 640px) {
+  .sm\:z-0 {
+    z-index: 0;
+  }
+  .sm\:z-10 {
+    z-index: 10;
+  }
+  .sm\:z-20 {
+    z-index: 20;
+  }
+  .sm\:z-50 {
+    z-index: 50;
+  }
+  .sm\:z-100 {
+    z-index: 100;
+  }
+  .sm\:z-auto {
+    z-index: auto;
+  }
+}
+@media (min-width: 768px) {
+  .md\:z-0 {
+    z-index: 0;
+  }
+  .md\:z-10 {
+    z-index: 10;
+  }
+  .md\:z-20 {
+    z-index: 20;
+  }
+  .md\:z-50 {
+    z-index: 50;
+  }
+  .md\:z-100 {
+    z-index: 100;
+  }
+  .md\:z-auto {
+    z-index: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:z-0 {
+    z-index: 0;
+  }
+  .lg\:z-10 {
+    z-index: 10;
+  }
+  .lg\:z-20 {
+    z-index: 20;
+  }
+  .lg\:z-50 {
+    z-index: 50;
+  }
+  .lg\:z-100 {
+    z-index: 100;
+  }
+  .lg\:z-auto {
+    z-index: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .xl\:z-0 {
+    z-index: 0;
+  }
+  .xl\:z-10 {
+    z-index: 10;
+  }
+  .xl\:z-20 {
+    z-index: 20;
+  }
+  .xl\:z-50 {
+    z-index: 50;
+  }
+  .xl\:z-100 {
+    z-index: 100;
+  }
+  .xl\:z-auto {
+    z-index: auto;
+  }
+}
+@media (min-width: 1536px) {
+  .bp-2xl\:z-0 {
+    z-index: 0;
+  }
+  .bp-2xl\:z-10 {
+    z-index: 10;
+  }
+  .bp-2xl\:z-20 {
+    z-index: 20;
+  }
+  .bp-2xl\:z-50 {
+    z-index: 50;
+  }
+  .bp-2xl\:z-100 {
+    z-index: 100;
+  }
+  .bp-2xl\:z-auto {
+    z-index: auto;
+  }
+}
 
 /*# sourceMappingURL=spica.css.map */

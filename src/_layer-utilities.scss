@@ -1,0 +1,29 @@
+@use 'breakpoints' as *;
+
+// Z-index scale
+$spica-z-index: (
+  0: 0,
+  10: 10,
+  20: 20,
+  50: 50,
+  100: 100,
+  auto: auto
+);
+
+// Base z-index classes
+@each $key, $value in $spica-z-index {
+  .z-#{$key} {
+    z-index: $value;
+  }
+}
+
+// Responsive variants
+@each $bp, $size in $spica-breakpoints {
+  @media (min-width: $size) {
+    @each $key, $value in $spica-z-index {
+      .#{$bp}\:z-#{$key} {
+        z-index: $value;
+      }
+    }
+  }
+}
