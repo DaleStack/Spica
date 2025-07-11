@@ -1,4 +1,5 @@
 @use 'breakpoints' as *;
+@use 'sass:string';
 
 // Font sizes
 $spica-font-size: (
@@ -18,7 +19,7 @@ $spica-font-weight: (
   normal: 400,
   medium: 500,
   bold: 700,
-  black: 900
+  "black": 900 // ✅ quoted to avoid interpolation warning
 );
 
 // Line heights
@@ -55,7 +56,7 @@ $spica-states: (
   focus: ":focus"
 );
 
-// Function
+// Safe key generator
 @function spica-safe-key($key) {
   $key-str: "#{$key}";
   $dot: string.index($key-str, ".");
@@ -65,4 +66,89 @@ $spica-states: (
     $key-str
   );
   @return $key-safe;
+}
+
+//// ------------------------
+// Font size
+@each $key, $val in $spica-font-size {
+  .text-#{"" + $key} { font-size: $val; }
+
+  @each $state, $pseudo in $spica-states {
+    .#{$state}\:text-#{"" + $key}#{$pseudo} { font-size: $val; }
+  }
+}
+@each $bp, $size in $spica-breakpoints {
+  @media (min-width: $size) {
+    @each $key, $val in $spica-font-size {
+      .#{$bp}\:text-#{"" + $key} { font-size: $val; }
+    }
+  }
+}
+
+//// ------------------------
+// Font weight
+@each $key, $val in $spica-font-weight {
+  .font-#{"" + $key} { font-weight: $val; }
+
+  @each $state, $pseudo in $spica-states {
+    .#{$state}\:font-#{"" + $key}#{$pseudo} { font-weight: $val; }
+  }
+}
+@each $bp, $size in $spica-breakpoints {
+  @media (min-width: $size) {
+    @each $key, $val in $spica-font-weight {
+      .#{$bp}\:font-#{"" + $key} { font-weight: $val; }
+    }
+  }
+}
+
+//// ------------------------
+// Line height
+@each $key, $val in $spica-line-height {
+  .leading-#{"" + $key} { line-height: $val; }
+
+  @each $state, $pseudo in $spica-states {
+    .#{$state}\:leading-#{"" + $key}#{$pseudo} { line-height: $val; }
+  }
+}
+@each $bp, $size in $spica-breakpoints {
+  @media (min-width: $size) {
+    @each $key, $val in $spica-line-height {
+      .#{$bp}\:leading-#{"" + $key} { line-height: $val; }
+    }
+  }
+}
+
+//// ------------------------
+// Letter spacing
+@each $key, $val in $spica-letter-spacing {
+  .tracking-#{"" + $key} { letter-spacing: $val; }
+
+  @each $state, $pseudo in $spica-states {
+    .#{$state}\:tracking-#{"" + $key}#{$pseudo} { letter-spacing: $val; }
+  }
+}
+@each $bp, $size in $spica-breakpoints {
+  @media (min-width: $size) {
+    @each $key, $val in $spica-letter-spacing {
+      .#{$bp}\:tracking-#{"" + $key} { letter-spacing: $val; }
+    }
+  }
+}
+
+//// ------------------------
+// Text alignment
+@each $key, $val in $spica-text-align {
+  .text-align-#{"" + $key} { text-align: $val; }
+
+  @each $state, $pseudo in $spica-states {
+    .#{$state}\:text-align-#{"" + $key}#{$pseudo} { text-align: $val; }
+  }
+}
+@each $bp, $size in $spica-breakpoints {
+  @media (min-width: $size) {
+    @each $key, $val in $spica-text-align {
+      .#{$bp}\:text-align-#{"" + $key} { text-align: $val; }
+    }
+  }
 }
