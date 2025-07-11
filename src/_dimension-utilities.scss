@@ -5,6 +5,9 @@
 $spica-width: (
   full: 100%,
   screen: 100vw,
+  screen-1_2: 50vw,
+  screen-1_4: 25vw,
+  screen-1_8: 12.5vw,
   auto: auto,
   min: min-content,
   max: max-content,
@@ -21,6 +24,9 @@ $spica-width: (
 $spica-height: (
   full: 100%,
   screen: 100vh,
+  screen-1_2: 50vh,
+  screen-1_4: 25vh,
+  screen-1_8: 12.5vh,
   auto: auto,
   min: min-content,
   max: max-content,
@@ -32,6 +38,7 @@ $spica-height: (
   4: 1rem,
   8: 2rem
 );
+
 
 // Safe key generator
 @function spica-safe-key($key) {
