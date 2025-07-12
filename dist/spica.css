@@ -35100,72 +35100,72 @@
   box-shadow: none;
 }
 
-.shadow-sm {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.shadow-md {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.shadow-lg {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
-}
-
-.shadow-xl {
-  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
-}
-
-.shadow-inner {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
-}
-
 .hover\:shadow-none:hover {
   box-shadow: none;
-}
-
-.hover\:shadow-sm:hover {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.hover\:shadow-md:hover {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.hover\:shadow-lg:hover {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
-}
-
-.hover\:shadow-xl:hover {
-  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
-}
-
-.hover\:shadow-inner:hover {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
 }
 
 .focus\:shadow-none:focus {
   box-shadow: none;
 }
 
+.shadow-sm {
+  box-shadow: 0 1px 2px var(--spica-shadow-color, rgba(0, 0, 0, 0.05));
+}
+
+.hover\:shadow-sm:hover {
+  box-shadow: 0 1px 2px var(--spica-shadow-color, rgba(0, 0, 0, 0.05));
+}
+
 .focus\:shadow-sm:focus {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px var(--spica-shadow-color, rgba(0, 0, 0, 0.05));
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px var(--spica-shadow-color, rgba(0, 0, 0, 0.1));
+}
+
+.hover\:shadow-md:hover {
+  box-shadow: 0 4px 6px var(--spica-shadow-color, rgba(0, 0, 0, 0.1));
 }
 
 .focus\:shadow-md:focus {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--spica-shadow-color, rgba(0, 0, 0, 0.1));
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px var(--spica-shadow-color, rgba(0, 0, 0, 0.15));
+}
+
+.hover\:shadow-lg:hover {
+  box-shadow: 0 10px 15px var(--spica-shadow-color, rgba(0, 0, 0, 0.15));
 }
 
 .focus\:shadow-lg:focus {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 15px var(--spica-shadow-color, rgba(0, 0, 0, 0.15));
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px var(--spica-shadow-color, rgba(0, 0, 0, 0.2));
+}
+
+.hover\:shadow-xl:hover {
+  box-shadow: 0 20px 25px var(--spica-shadow-color, rgba(0, 0, 0, 0.2));
 }
 
 .focus\:shadow-xl:focus {
-  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 25px var(--spica-shadow-color, rgba(0, 0, 0, 0.2));
+}
+
+.shadow-inner {
+  box-shadow: inset 0 2px 4px var(--spica-shadow-color, rgba(0, 0, 0, 0.06));
+}
+
+.hover\:shadow-inner:hover {
+  box-shadow: inset 0 2px 4px var(--spica-shadow-color, rgba(0, 0, 0, 0.06));
 }
 
 .focus\:shadow-inner:focus {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  box-shadow: inset 0 2px 4px var(--spica-shadow-color, rgba(0, 0, 0, 0.06));
 }
 
 @media (min-width: 640px) {
@@ -35173,19 +35173,19 @@
     box-shadow: none;
   }
   .sm\:shadow-sm {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px var(--spica-shadow-color, rgba(0, 0, 0, 0.05));
   }
   .sm\:shadow-md {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--spica-shadow-color, rgba(0, 0, 0, 0.1));
   }
   .sm\:shadow-lg {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 15px var(--spica-shadow-color, rgba(0, 0, 0, 0.15));
   }
   .sm\:shadow-xl {
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 25px var(--spica-shadow-color, rgba(0, 0, 0, 0.2));
   }
   .sm\:shadow-inner {
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    box-shadow: inset 0 2px 4px var(--spica-shadow-color, rgba(0, 0, 0, 0.06));
   }
 }
 @media (min-width: 768px) {
@@ -35193,19 +35193,19 @@
     box-shadow: none;
   }
   .md\:shadow-sm {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px var(--spica-shadow-color, rgba(0, 0, 0, 0.05));
   }
   .md\:shadow-md {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--spica-shadow-color, rgba(0, 0, 0, 0.1));
   }
   .md\:shadow-lg {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 15px var(--spica-shadow-color, rgba(0, 0, 0, 0.15));
   }
   .md\:shadow-xl {
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 25px var(--spica-shadow-color, rgba(0, 0, 0, 0.2));
   }
   .md\:shadow-inner {
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    box-shadow: inset 0 2px 4px var(--spica-shadow-color, rgba(0, 0, 0, 0.06));
   }
 }
 @media (min-width: 1024px) {
@@ -35213,19 +35213,19 @@
     box-shadow: none;
   }
   .lg\:shadow-sm {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px var(--spica-shadow-color, rgba(0, 0, 0, 0.05));
   }
   .lg\:shadow-md {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--spica-shadow-color, rgba(0, 0, 0, 0.1));
   }
   .lg\:shadow-lg {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 15px var(--spica-shadow-color, rgba(0, 0, 0, 0.15));
   }
   .lg\:shadow-xl {
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 25px var(--spica-shadow-color, rgba(0, 0, 0, 0.2));
   }
   .lg\:shadow-inner {
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    box-shadow: inset 0 2px 4px var(--spica-shadow-color, rgba(0, 0, 0, 0.06));
   }
 }
 @media (min-width: 1280px) {
@@ -35233,19 +35233,19 @@
     box-shadow: none;
   }
   .xl\:shadow-sm {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px var(--spica-shadow-color, rgba(0, 0, 0, 0.05));
   }
   .xl\:shadow-md {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--spica-shadow-color, rgba(0, 0, 0, 0.1));
   }
   .xl\:shadow-lg {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 15px var(--spica-shadow-color, rgba(0, 0, 0, 0.15));
   }
   .xl\:shadow-xl {
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 25px var(--spica-shadow-color, rgba(0, 0, 0, 0.2));
   }
   .xl\:shadow-inner {
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    box-shadow: inset 0 2px 4px var(--spica-shadow-color, rgba(0, 0, 0, 0.06));
   }
 }
 @media (min-width: 1536px) {
@@ -35253,20 +35253,835 @@
     box-shadow: none;
   }
   .bp-2xl\:shadow-sm {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px var(--spica-shadow-color, rgba(0, 0, 0, 0.05));
   }
   .bp-2xl\:shadow-md {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--spica-shadow-color, rgba(0, 0, 0, 0.1));
   }
   .bp-2xl\:shadow-lg {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 15px var(--spica-shadow-color, rgba(0, 0, 0, 0.15));
   }
   .bp-2xl\:shadow-xl {
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 25px var(--spica-shadow-color, rgba(0, 0, 0, 0.2));
   }
   .bp-2xl\:shadow-inner {
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    box-shadow: inset 0 2px 4px var(--spica-shadow-color, rgba(0, 0, 0, 0.06));
   }
+}
+.hover\:shadow-color-white:hover {
+  --spica-shadow-color: rgba(255, 255, 255, 0.15);
+}
+
+.hover\:shadow-color-black:hover {
+  --spica-shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+.hover\:shadow-color-blue-50:hover {
+  --spica-shadow-color: rgba(239, 246, 255, 0.15);
+}
+
+.hover\:shadow-color-blue-100:hover {
+  --spica-shadow-color: rgba(219, 234, 254, 0.15);
+}
+
+.hover\:shadow-color-blue-200:hover {
+  --spica-shadow-color: rgba(191, 219, 254, 0.15);
+}
+
+.hover\:shadow-color-blue-300:hover {
+  --spica-shadow-color: rgba(147, 197, 253, 0.15);
+}
+
+.hover\:shadow-color-blue-400:hover {
+  --spica-shadow-color: rgba(96, 165, 250, 0.15);
+}
+
+.hover\:shadow-color-blue-500:hover {
+  --spica-shadow-color: rgba(59, 130, 246, 0.15);
+}
+
+.hover\:shadow-color-blue-600:hover {
+  --spica-shadow-color: rgba(37, 99, 235, 0.15);
+}
+
+.hover\:shadow-color-blue-700:hover {
+  --spica-shadow-color: rgba(29, 78, 216, 0.15);
+}
+
+.hover\:shadow-color-blue-800:hover {
+  --spica-shadow-color: rgba(30, 64, 175, 0.15);
+}
+
+.hover\:shadow-color-blue-900:hover {
+  --spica-shadow-color: rgba(30, 58, 138, 0.15);
+}
+
+.hover\:shadow-color-red-50:hover {
+  --spica-shadow-color: rgba(254, 242, 242, 0.15);
+}
+
+.hover\:shadow-color-red-100:hover {
+  --spica-shadow-color: rgba(254, 226, 226, 0.15);
+}
+
+.hover\:shadow-color-red-200:hover {
+  --spica-shadow-color: rgba(254, 202, 202, 0.15);
+}
+
+.hover\:shadow-color-red-300:hover {
+  --spica-shadow-color: rgba(252, 165, 165, 0.15);
+}
+
+.hover\:shadow-color-red-400:hover {
+  --spica-shadow-color: rgba(248, 113, 113, 0.15);
+}
+
+.hover\:shadow-color-red-500:hover {
+  --spica-shadow-color: rgba(239, 68, 68, 0.15);
+}
+
+.hover\:shadow-color-red-600:hover {
+  --spica-shadow-color: rgba(220, 38, 38, 0.15);
+}
+
+.hover\:shadow-color-red-700:hover {
+  --spica-shadow-color: rgba(185, 28, 28, 0.15);
+}
+
+.hover\:shadow-color-red-800:hover {
+  --spica-shadow-color: rgba(153, 27, 27, 0.15);
+}
+
+.hover\:shadow-color-red-900:hover {
+  --spica-shadow-color: rgba(127, 29, 29, 0.15);
+}
+
+.hover\:shadow-color-green-50:hover {
+  --spica-shadow-color: rgba(240, 253, 244, 0.15);
+}
+
+.hover\:shadow-color-green-100:hover {
+  --spica-shadow-color: rgba(220, 252, 231, 0.15);
+}
+
+.hover\:shadow-color-green-200:hover {
+  --spica-shadow-color: rgba(187, 247, 208, 0.15);
+}
+
+.hover\:shadow-color-green-300:hover {
+  --spica-shadow-color: rgba(134, 239, 172, 0.15);
+}
+
+.hover\:shadow-color-green-400:hover {
+  --spica-shadow-color: rgba(74, 222, 128, 0.15);
+}
+
+.hover\:shadow-color-green-500:hover {
+  --spica-shadow-color: rgba(34, 197, 94, 0.15);
+}
+
+.hover\:shadow-color-green-600:hover {
+  --spica-shadow-color: rgba(22, 163, 74, 0.15);
+}
+
+.hover\:shadow-color-green-700:hover {
+  --spica-shadow-color: rgba(21, 128, 61, 0.15);
+}
+
+.hover\:shadow-color-green-800:hover {
+  --spica-shadow-color: rgba(22, 101, 52, 0.15);
+}
+
+.hover\:shadow-color-green-900:hover {
+  --spica-shadow-color: rgba(20, 83, 45, 0.15);
+}
+
+.hover\:shadow-color-gray-50:hover {
+  --spica-shadow-color: rgba(249, 250, 251, 0.15);
+}
+
+.hover\:shadow-color-gray-100:hover {
+  --spica-shadow-color: rgba(243, 244, 246, 0.15);
+}
+
+.hover\:shadow-color-gray-200:hover {
+  --spica-shadow-color: rgba(229, 231, 235, 0.15);
+}
+
+.hover\:shadow-color-gray-300:hover {
+  --spica-shadow-color: rgba(209, 213, 219, 0.15);
+}
+
+.hover\:shadow-color-gray-400:hover {
+  --spica-shadow-color: rgba(156, 163, 175, 0.15);
+}
+
+.hover\:shadow-color-gray-500:hover {
+  --spica-shadow-color: rgba(107, 114, 128, 0.15);
+}
+
+.hover\:shadow-color-gray-600:hover {
+  --spica-shadow-color: rgba(75, 85, 99, 0.15);
+}
+
+.hover\:shadow-color-gray-700:hover {
+  --spica-shadow-color: rgba(55, 65, 81, 0.15);
+}
+
+.hover\:shadow-color-gray-800:hover {
+  --spica-shadow-color: rgba(31, 41, 55, 0.15);
+}
+
+.hover\:shadow-color-gray-900:hover {
+  --spica-shadow-color: rgba(17, 24, 39, 0.15);
+}
+
+.hover\:shadow-color-yellow-50:hover {
+  --spica-shadow-color: rgba(254, 252, 232, 0.15);
+}
+
+.hover\:shadow-color-yellow-100:hover {
+  --spica-shadow-color: rgba(254, 249, 195, 0.15);
+}
+
+.hover\:shadow-color-yellow-200:hover {
+  --spica-shadow-color: rgba(254, 240, 138, 0.15);
+}
+
+.hover\:shadow-color-yellow-300:hover {
+  --spica-shadow-color: rgba(253, 224, 71, 0.15);
+}
+
+.hover\:shadow-color-yellow-400:hover {
+  --spica-shadow-color: rgba(250, 204, 21, 0.15);
+}
+
+.hover\:shadow-color-yellow-500:hover {
+  --spica-shadow-color: rgba(234, 179, 8, 0.15);
+}
+
+.hover\:shadow-color-yellow-600:hover {
+  --spica-shadow-color: rgba(202, 138, 4, 0.15);
+}
+
+.hover\:shadow-color-yellow-700:hover {
+  --spica-shadow-color: rgba(161, 98, 7, 0.15);
+}
+
+.hover\:shadow-color-yellow-800:hover {
+  --spica-shadow-color: rgba(133, 77, 14, 0.15);
+}
+
+.hover\:shadow-color-yellow-900:hover {
+  --spica-shadow-color: rgba(113, 63, 18, 0.15);
+}
+
+.hover\:shadow-color-purple-50:hover {
+  --spica-shadow-color: rgba(245, 243, 255, 0.15);
+}
+
+.hover\:shadow-color-purple-100:hover {
+  --spica-shadow-color: rgba(237, 233, 254, 0.15);
+}
+
+.hover\:shadow-color-purple-200:hover {
+  --spica-shadow-color: rgba(221, 214, 254, 0.15);
+}
+
+.hover\:shadow-color-purple-300:hover {
+  --spica-shadow-color: rgba(196, 181, 253, 0.15);
+}
+
+.hover\:shadow-color-purple-400:hover {
+  --spica-shadow-color: rgba(167, 139, 250, 0.15);
+}
+
+.hover\:shadow-color-purple-500:hover {
+  --spica-shadow-color: rgba(139, 92, 246, 0.15);
+}
+
+.hover\:shadow-color-purple-600:hover {
+  --spica-shadow-color: rgba(124, 58, 237, 0.15);
+}
+
+.hover\:shadow-color-purple-700:hover {
+  --spica-shadow-color: rgba(109, 40, 217, 0.15);
+}
+
+.hover\:shadow-color-purple-800:hover {
+  --spica-shadow-color: rgba(91, 33, 182, 0.15);
+}
+
+.hover\:shadow-color-purple-900:hover {
+  --spica-shadow-color: rgba(76, 29, 149, 0.15);
+}
+
+.hover\:shadow-color-pink-50:hover {
+  --spica-shadow-color: rgba(253, 242, 248, 0.15);
+}
+
+.hover\:shadow-color-pink-100:hover {
+  --spica-shadow-color: rgba(252, 231, 243, 0.15);
+}
+
+.hover\:shadow-color-pink-200:hover {
+  --spica-shadow-color: rgba(251, 207, 232, 0.15);
+}
+
+.hover\:shadow-color-pink-300:hover {
+  --spica-shadow-color: rgba(249, 168, 212, 0.15);
+}
+
+.hover\:shadow-color-pink-400:hover {
+  --spica-shadow-color: rgba(244, 114, 182, 0.15);
+}
+
+.hover\:shadow-color-pink-500:hover {
+  --spica-shadow-color: rgba(236, 72, 153, 0.15);
+}
+
+.hover\:shadow-color-pink-600:hover {
+  --spica-shadow-color: rgba(219, 39, 119, 0.15);
+}
+
+.hover\:shadow-color-pink-700:hover {
+  --spica-shadow-color: rgba(190, 24, 93, 0.15);
+}
+
+.hover\:shadow-color-pink-800:hover {
+  --spica-shadow-color: rgba(157, 23, 77, 0.15);
+}
+
+.hover\:shadow-color-pink-900:hover {
+  --spica-shadow-color: rgba(131, 24, 67, 0.15);
+}
+
+.hover\:shadow-color-indigo-50:hover {
+  --spica-shadow-color: rgba(238, 242, 255, 0.15);
+}
+
+.hover\:shadow-color-indigo-100:hover {
+  --spica-shadow-color: rgba(224, 231, 255, 0.15);
+}
+
+.hover\:shadow-color-indigo-200:hover {
+  --spica-shadow-color: rgba(199, 210, 254, 0.15);
+}
+
+.hover\:shadow-color-indigo-300:hover {
+  --spica-shadow-color: rgba(165, 180, 252, 0.15);
+}
+
+.hover\:shadow-color-indigo-400:hover {
+  --spica-shadow-color: rgba(129, 140, 248, 0.15);
+}
+
+.hover\:shadow-color-indigo-500:hover {
+  --spica-shadow-color: rgba(99, 102, 241, 0.15);
+}
+
+.hover\:shadow-color-indigo-600:hover {
+  --spica-shadow-color: rgba(79, 70, 229, 0.15);
+}
+
+.hover\:shadow-color-indigo-700:hover {
+  --spica-shadow-color: rgba(67, 56, 202, 0.15);
+}
+
+.hover\:shadow-color-indigo-800:hover {
+  --spica-shadow-color: rgba(55, 48, 163, 0.15);
+}
+
+.hover\:shadow-color-indigo-900:hover {
+  --spica-shadow-color: rgba(49, 46, 129, 0.15);
+}
+
+.hover\:shadow-color-teal-50:hover {
+  --spica-shadow-color: rgba(240, 253, 250, 0.15);
+}
+
+.hover\:shadow-color-teal-100:hover {
+  --spica-shadow-color: rgba(204, 251, 241, 0.15);
+}
+
+.hover\:shadow-color-teal-200:hover {
+  --spica-shadow-color: rgba(153, 246, 228, 0.15);
+}
+
+.hover\:shadow-color-teal-300:hover {
+  --spica-shadow-color: rgba(94, 234, 212, 0.15);
+}
+
+.hover\:shadow-color-teal-400:hover {
+  --spica-shadow-color: rgba(45, 212, 191, 0.15);
+}
+
+.hover\:shadow-color-teal-500:hover {
+  --spica-shadow-color: rgba(20, 184, 166, 0.15);
+}
+
+.hover\:shadow-color-teal-600:hover {
+  --spica-shadow-color: rgba(13, 148, 136, 0.15);
+}
+
+.hover\:shadow-color-teal-700:hover {
+  --spica-shadow-color: rgba(15, 118, 110, 0.15);
+}
+
+.hover\:shadow-color-teal-800:hover {
+  --spica-shadow-color: rgba(17, 94, 89, 0.15);
+}
+
+.hover\:shadow-color-teal-900:hover {
+  --spica-shadow-color: rgba(19, 78, 74, 0.15);
+}
+
+.hover\:shadow-color-orange-50:hover {
+  --spica-shadow-color: rgba(255, 247, 237, 0.15);
+}
+
+.hover\:shadow-color-orange-100:hover {
+  --spica-shadow-color: rgba(255, 237, 213, 0.15);
+}
+
+.hover\:shadow-color-orange-200:hover {
+  --spica-shadow-color: rgba(254, 215, 170, 0.15);
+}
+
+.hover\:shadow-color-orange-300:hover {
+  --spica-shadow-color: rgba(253, 186, 116, 0.15);
+}
+
+.hover\:shadow-color-orange-400:hover {
+  --spica-shadow-color: rgba(251, 146, 60, 0.15);
+}
+
+.hover\:shadow-color-orange-500:hover {
+  --spica-shadow-color: rgba(249, 115, 22, 0.15);
+}
+
+.hover\:shadow-color-orange-600:hover {
+  --spica-shadow-color: rgba(234, 88, 12, 0.15);
+}
+
+.hover\:shadow-color-orange-700:hover {
+  --spica-shadow-color: rgba(194, 65, 12, 0.15);
+}
+
+.hover\:shadow-color-orange-800:hover {
+  --spica-shadow-color: rgba(154, 52, 18, 0.15);
+}
+
+.hover\:shadow-color-orange-900:hover {
+  --spica-shadow-color: rgba(124, 45, 18, 0.15);
+}
+
+.focus\:shadow-color-white:focus {
+  --spica-shadow-color: rgba(255, 255, 255, 0.15);
+}
+
+.focus\:shadow-color-black:focus {
+  --spica-shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+.focus\:shadow-color-blue-50:focus {
+  --spica-shadow-color: rgba(239, 246, 255, 0.15);
+}
+
+.focus\:shadow-color-blue-100:focus {
+  --spica-shadow-color: rgba(219, 234, 254, 0.15);
+}
+
+.focus\:shadow-color-blue-200:focus {
+  --spica-shadow-color: rgba(191, 219, 254, 0.15);
+}
+
+.focus\:shadow-color-blue-300:focus {
+  --spica-shadow-color: rgba(147, 197, 253, 0.15);
+}
+
+.focus\:shadow-color-blue-400:focus {
+  --spica-shadow-color: rgba(96, 165, 250, 0.15);
+}
+
+.focus\:shadow-color-blue-500:focus {
+  --spica-shadow-color: rgba(59, 130, 246, 0.15);
+}
+
+.focus\:shadow-color-blue-600:focus {
+  --spica-shadow-color: rgba(37, 99, 235, 0.15);
+}
+
+.focus\:shadow-color-blue-700:focus {
+  --spica-shadow-color: rgba(29, 78, 216, 0.15);
+}
+
+.focus\:shadow-color-blue-800:focus {
+  --spica-shadow-color: rgba(30, 64, 175, 0.15);
+}
+
+.focus\:shadow-color-blue-900:focus {
+  --spica-shadow-color: rgba(30, 58, 138, 0.15);
+}
+
+.focus\:shadow-color-red-50:focus {
+  --spica-shadow-color: rgba(254, 242, 242, 0.15);
+}
+
+.focus\:shadow-color-red-100:focus {
+  --spica-shadow-color: rgba(254, 226, 226, 0.15);
+}
+
+.focus\:shadow-color-red-200:focus {
+  --spica-shadow-color: rgba(254, 202, 202, 0.15);
+}
+
+.focus\:shadow-color-red-300:focus {
+  --spica-shadow-color: rgba(252, 165, 165, 0.15);
+}
+
+.focus\:shadow-color-red-400:focus {
+  --spica-shadow-color: rgba(248, 113, 113, 0.15);
+}
+
+.focus\:shadow-color-red-500:focus {
+  --spica-shadow-color: rgba(239, 68, 68, 0.15);
+}
+
+.focus\:shadow-color-red-600:focus {
+  --spica-shadow-color: rgba(220, 38, 38, 0.15);
+}
+
+.focus\:shadow-color-red-700:focus {
+  --spica-shadow-color: rgba(185, 28, 28, 0.15);
+}
+
+.focus\:shadow-color-red-800:focus {
+  --spica-shadow-color: rgba(153, 27, 27, 0.15);
+}
+
+.focus\:shadow-color-red-900:focus {
+  --spica-shadow-color: rgba(127, 29, 29, 0.15);
+}
+
+.focus\:shadow-color-green-50:focus {
+  --spica-shadow-color: rgba(240, 253, 244, 0.15);
+}
+
+.focus\:shadow-color-green-100:focus {
+  --spica-shadow-color: rgba(220, 252, 231, 0.15);
+}
+
+.focus\:shadow-color-green-200:focus {
+  --spica-shadow-color: rgba(187, 247, 208, 0.15);
+}
+
+.focus\:shadow-color-green-300:focus {
+  --spica-shadow-color: rgba(134, 239, 172, 0.15);
+}
+
+.focus\:shadow-color-green-400:focus {
+  --spica-shadow-color: rgba(74, 222, 128, 0.15);
+}
+
+.focus\:shadow-color-green-500:focus {
+  --spica-shadow-color: rgba(34, 197, 94, 0.15);
+}
+
+.focus\:shadow-color-green-600:focus {
+  --spica-shadow-color: rgba(22, 163, 74, 0.15);
+}
+
+.focus\:shadow-color-green-700:focus {
+  --spica-shadow-color: rgba(21, 128, 61, 0.15);
+}
+
+.focus\:shadow-color-green-800:focus {
+  --spica-shadow-color: rgba(22, 101, 52, 0.15);
+}
+
+.focus\:shadow-color-green-900:focus {
+  --spica-shadow-color: rgba(20, 83, 45, 0.15);
+}
+
+.focus\:shadow-color-gray-50:focus {
+  --spica-shadow-color: rgba(249, 250, 251, 0.15);
+}
+
+.focus\:shadow-color-gray-100:focus {
+  --spica-shadow-color: rgba(243, 244, 246, 0.15);
+}
+
+.focus\:shadow-color-gray-200:focus {
+  --spica-shadow-color: rgba(229, 231, 235, 0.15);
+}
+
+.focus\:shadow-color-gray-300:focus {
+  --spica-shadow-color: rgba(209, 213, 219, 0.15);
+}
+
+.focus\:shadow-color-gray-400:focus {
+  --spica-shadow-color: rgba(156, 163, 175, 0.15);
+}
+
+.focus\:shadow-color-gray-500:focus {
+  --spica-shadow-color: rgba(107, 114, 128, 0.15);
+}
+
+.focus\:shadow-color-gray-600:focus {
+  --spica-shadow-color: rgba(75, 85, 99, 0.15);
+}
+
+.focus\:shadow-color-gray-700:focus {
+  --spica-shadow-color: rgba(55, 65, 81, 0.15);
+}
+
+.focus\:shadow-color-gray-800:focus {
+  --spica-shadow-color: rgba(31, 41, 55, 0.15);
+}
+
+.focus\:shadow-color-gray-900:focus {
+  --spica-shadow-color: rgba(17, 24, 39, 0.15);
+}
+
+.focus\:shadow-color-yellow-50:focus {
+  --spica-shadow-color: rgba(254, 252, 232, 0.15);
+}
+
+.focus\:shadow-color-yellow-100:focus {
+  --spica-shadow-color: rgba(254, 249, 195, 0.15);
+}
+
+.focus\:shadow-color-yellow-200:focus {
+  --spica-shadow-color: rgba(254, 240, 138, 0.15);
+}
+
+.focus\:shadow-color-yellow-300:focus {
+  --spica-shadow-color: rgba(253, 224, 71, 0.15);
+}
+
+.focus\:shadow-color-yellow-400:focus {
+  --spica-shadow-color: rgba(250, 204, 21, 0.15);
+}
+
+.focus\:shadow-color-yellow-500:focus {
+  --spica-shadow-color: rgba(234, 179, 8, 0.15);
+}
+
+.focus\:shadow-color-yellow-600:focus {
+  --spica-shadow-color: rgba(202, 138, 4, 0.15);
+}
+
+.focus\:shadow-color-yellow-700:focus {
+  --spica-shadow-color: rgba(161, 98, 7, 0.15);
+}
+
+.focus\:shadow-color-yellow-800:focus {
+  --spica-shadow-color: rgba(133, 77, 14, 0.15);
+}
+
+.focus\:shadow-color-yellow-900:focus {
+  --spica-shadow-color: rgba(113, 63, 18, 0.15);
+}
+
+.focus\:shadow-color-purple-50:focus {
+  --spica-shadow-color: rgba(245, 243, 255, 0.15);
+}
+
+.focus\:shadow-color-purple-100:focus {
+  --spica-shadow-color: rgba(237, 233, 254, 0.15);
+}
+
+.focus\:shadow-color-purple-200:focus {
+  --spica-shadow-color: rgba(221, 214, 254, 0.15);
+}
+
+.focus\:shadow-color-purple-300:focus {
+  --spica-shadow-color: rgba(196, 181, 253, 0.15);
+}
+
+.focus\:shadow-color-purple-400:focus {
+  --spica-shadow-color: rgba(167, 139, 250, 0.15);
+}
+
+.focus\:shadow-color-purple-500:focus {
+  --spica-shadow-color: rgba(139, 92, 246, 0.15);
+}
+
+.focus\:shadow-color-purple-600:focus {
+  --spica-shadow-color: rgba(124, 58, 237, 0.15);
+}
+
+.focus\:shadow-color-purple-700:focus {
+  --spica-shadow-color: rgba(109, 40, 217, 0.15);
+}
+
+.focus\:shadow-color-purple-800:focus {
+  --spica-shadow-color: rgba(91, 33, 182, 0.15);
+}
+
+.focus\:shadow-color-purple-900:focus {
+  --spica-shadow-color: rgba(76, 29, 149, 0.15);
+}
+
+.focus\:shadow-color-pink-50:focus {
+  --spica-shadow-color: rgba(253, 242, 248, 0.15);
+}
+
+.focus\:shadow-color-pink-100:focus {
+  --spica-shadow-color: rgba(252, 231, 243, 0.15);
+}
+
+.focus\:shadow-color-pink-200:focus {
+  --spica-shadow-color: rgba(251, 207, 232, 0.15);
+}
+
+.focus\:shadow-color-pink-300:focus {
+  --spica-shadow-color: rgba(249, 168, 212, 0.15);
+}
+
+.focus\:shadow-color-pink-400:focus {
+  --spica-shadow-color: rgba(244, 114, 182, 0.15);
+}
+
+.focus\:shadow-color-pink-500:focus {
+  --spica-shadow-color: rgba(236, 72, 153, 0.15);
+}
+
+.focus\:shadow-color-pink-600:focus {
+  --spica-shadow-color: rgba(219, 39, 119, 0.15);
+}
+
+.focus\:shadow-color-pink-700:focus {
+  --spica-shadow-color: rgba(190, 24, 93, 0.15);
+}
+
+.focus\:shadow-color-pink-800:focus {
+  --spica-shadow-color: rgba(157, 23, 77, 0.15);
+}
+
+.focus\:shadow-color-pink-900:focus {
+  --spica-shadow-color: rgba(131, 24, 67, 0.15);
+}
+
+.focus\:shadow-color-indigo-50:focus {
+  --spica-shadow-color: rgba(238, 242, 255, 0.15);
+}
+
+.focus\:shadow-color-indigo-100:focus {
+  --spica-shadow-color: rgba(224, 231, 255, 0.15);
+}
+
+.focus\:shadow-color-indigo-200:focus {
+  --spica-shadow-color: rgba(199, 210, 254, 0.15);
+}
+
+.focus\:shadow-color-indigo-300:focus {
+  --spica-shadow-color: rgba(165, 180, 252, 0.15);
+}
+
+.focus\:shadow-color-indigo-400:focus {
+  --spica-shadow-color: rgba(129, 140, 248, 0.15);
+}
+
+.focus\:shadow-color-indigo-500:focus {
+  --spica-shadow-color: rgba(99, 102, 241, 0.15);
+}
+
+.focus\:shadow-color-indigo-600:focus {
+  --spica-shadow-color: rgba(79, 70, 229, 0.15);
+}
+
+.focus\:shadow-color-indigo-700:focus {
+  --spica-shadow-color: rgba(67, 56, 202, 0.15);
+}
+
+.focus\:shadow-color-indigo-800:focus {
+  --spica-shadow-color: rgba(55, 48, 163, 0.15);
+}
+
+.focus\:shadow-color-indigo-900:focus {
+  --spica-shadow-color: rgba(49, 46, 129, 0.15);
+}
+
+.focus\:shadow-color-teal-50:focus {
+  --spica-shadow-color: rgba(240, 253, 250, 0.15);
+}
+
+.focus\:shadow-color-teal-100:focus {
+  --spica-shadow-color: rgba(204, 251, 241, 0.15);
+}
+
+.focus\:shadow-color-teal-200:focus {
+  --spica-shadow-color: rgba(153, 246, 228, 0.15);
+}
+
+.focus\:shadow-color-teal-300:focus {
+  --spica-shadow-color: rgba(94, 234, 212, 0.15);
+}
+
+.focus\:shadow-color-teal-400:focus {
+  --spica-shadow-color: rgba(45, 212, 191, 0.15);
+}
+
+.focus\:shadow-color-teal-500:focus {
+  --spica-shadow-color: rgba(20, 184, 166, 0.15);
+}
+
+.focus\:shadow-color-teal-600:focus {
+  --spica-shadow-color: rgba(13, 148, 136, 0.15);
+}
+
+.focus\:shadow-color-teal-700:focus {
+  --spica-shadow-color: rgba(15, 118, 110, 0.15);
+}
+
+.focus\:shadow-color-teal-800:focus {
+  --spica-shadow-color: rgba(17, 94, 89, 0.15);
+}
+
+.focus\:shadow-color-teal-900:focus {
+  --spica-shadow-color: rgba(19, 78, 74, 0.15);
+}
+
+.focus\:shadow-color-orange-50:focus {
+  --spica-shadow-color: rgba(255, 247, 237, 0.15);
+}
+
+.focus\:shadow-color-orange-100:focus {
+  --spica-shadow-color: rgba(255, 237, 213, 0.15);
+}
+
+.focus\:shadow-color-orange-200:focus {
+  --spica-shadow-color: rgba(254, 215, 170, 0.15);
+}
+
+.focus\:shadow-color-orange-300:focus {
+  --spica-shadow-color: rgba(253, 186, 116, 0.15);
+}
+
+.focus\:shadow-color-orange-400:focus {
+  --spica-shadow-color: rgba(251, 146, 60, 0.15);
+}
+
+.focus\:shadow-color-orange-500:focus {
+  --spica-shadow-color: rgba(249, 115, 22, 0.15);
+}
+
+.focus\:shadow-color-orange-600:focus {
+  --spica-shadow-color: rgba(234, 88, 12, 0.15);
+}
+
+.focus\:shadow-color-orange-700:focus {
+  --spica-shadow-color: rgba(194, 65, 12, 0.15);
+}
+
+.focus\:shadow-color-orange-800:focus {
+  --spica-shadow-color: rgba(154, 52, 18, 0.15);
+}
+
+.focus\:shadow-color-orange-900:focus {
+  --spica-shadow-color: rgba(124, 45, 18, 0.15);
 }
 
 /*# sourceMappingURL=spica.css.map */

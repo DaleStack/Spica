@@ -1,13 +1,16 @@
 @use 'breakpoints' as *;
+@use 'sass:map';
+@use 'sass:meta';
+@use 'colors' as *;
 
-// Shadow tokens
+// Shadow geometry tokens
 $spica-shadow: (
   none: none,
-  sm: 0 1px 2px rgba(0, 0, 0, 0.05),
-  md: 0 4px 6px rgba(0, 0, 0, 0.1),
-  lg: 0 10px 15px rgba(0, 0, 0, 0.15),
-  xl: 0 20px 25px rgba(0, 0, 0, 0.2),
-  inner: inset 0 2px 4px rgba(0, 0, 0, 0.06)
+  sm: 0 1px 2px var(--spica-shadow-color, rgba(0, 0, 0, 0.05)),
+  md: 0 4px 6px var(--spica-shadow-color, rgba(0, 0, 0, 0.1)),
+  lg: 0 10px 15px var(--spica-shadow-color, rgba(0, 0, 0, 0.15)),
+  xl: 0 20px 25px var(--spica-shadow-color, rgba(0, 0, 0, 0.2)),
+  inner: inset 0 2px 4px var(--spica-shadow-color, rgba(0, 0, 0, 0.06))
 );
 
 // Interaction states
@@ -16,23 +19,19 @@ $spica-states: (
   focus: ":focus"
 );
 
-// Base shadow classes
+// Base shadow classes (use default color or overridden)
 @each $key, $val in $spica-shadow {
   .shadow-#{"" + $key} {
     box-shadow: $val;
   }
-}
 
-// Interaction variants
-@each $state, $pseudo in $spica-states {
-  @each $key, $val in $spica-shadow {
+  @each $state, $pseudo in $spica-states {
     .#{$state}\:shadow-#{"" + $key}#{$pseudo} {
       box-shadow: $val;
     }
   }
 }
 
-// Responsive variants
 @each $bp, $size in $spica-breakpoints {
   @media (min-width: $size) {
     @each $key, $val in $spica-shadow {
@@ -42,3 +41,22 @@ $spica-states: (
     }
   }
 }
+
+// Shadow color classes from $spica-colors
+@each $state, $pseudo in $spica-states {
+  @each $group, $scale in $spica-colors {
+    @if meta.type-of($scale) == 'map' {
+      @each $shade, $hex in $scale {
+        .#{$state}\:shadow-color-#{"" + $group}-#{$shade}#{$pseudo} {
+          --spica-shadow-color: #{rgba($hex, 0.15)};
+        }
+      }
+    } @else {
+      .#{$state}\:shadow-color-#{"" + $group}#{$pseudo} {
+        --spica-shadow-color: #{rgba($scale, 0.15)};
+      }
+    }
+  }
+}
+
+
