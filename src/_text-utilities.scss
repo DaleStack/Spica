@@ -1,0 +1,47 @@
+@use 'breakpoints' as *;
+
+// Base text decoration utilities
+.underline {
+  text-decoration: underline;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+// Optional: Custom outline effect using text-shadow
+.text-outline {
+  color: white;
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+// Responsive variants
+@each $breakpoint, $size in $spica-breakpoints {
+  @media (min-width: #{$size}) {
+    .#{$breakpoint}\:underline {
+      text-decoration: underline;
+    }
+    .#{$breakpoint}\:line-through {
+      text-decoration: line-through;
+    }
+    .#{$breakpoint}\:no-underline {
+      text-decoration: none;
+    }
+    .#{$breakpoint}\:text-outline {
+      color: white;
+      text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    }
+  }
+}

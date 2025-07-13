@@ -37092,5 +37092,97 @@
     margin-top: 6rem;
   }
 }
+.underline {
+  text-decoration: underline;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.text-outline {
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+@media (min-width: 640px) {
+  .sm\:underline {
+    text-decoration: underline;
+  }
+  .sm\:line-through {
+    text-decoration: line-through;
+  }
+  .sm\:no-underline {
+    text-decoration: none;
+  }
+  .sm\:text-outline {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+}
+@media (min-width: 768px) {
+  .md\:underline {
+    text-decoration: underline;
+  }
+  .md\:line-through {
+    text-decoration: line-through;
+  }
+  .md\:no-underline {
+    text-decoration: none;
+  }
+  .md\:text-outline {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:underline {
+    text-decoration: underline;
+  }
+  .lg\:line-through {
+    text-decoration: line-through;
+  }
+  .lg\:no-underline {
+    text-decoration: none;
+  }
+  .lg\:text-outline {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+}
+@media (min-width: 1280px) {
+  .xl\:underline {
+    text-decoration: underline;
+  }
+  .xl\:line-through {
+    text-decoration: line-through;
+  }
+  .xl\:no-underline {
+    text-decoration: none;
+  }
+  .xl\:text-outline {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+}
+@media (min-width: 1536px) {
+  .bp-2xl\:underline {
+    text-decoration: underline;
+  }
+  .bp-2xl\:line-through {
+    text-decoration: line-through;
+  }
+  .bp-2xl\:no-underline {
+    text-decoration: none;
+  }
+  .bp-2xl\:text-outline {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+}
 
 /*# sourceMappingURL=spica.css.map */
