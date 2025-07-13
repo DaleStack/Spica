@@ -1,23 +1,89 @@
 @use 'breakpoints' as *;
+@use 'colors' as *;
+@use 'sass:meta';
 
 $spica-outline: (
   0: 0,
   default: 1px solid currentColor
 );
 
-// Base outline classes
+// Base outline styles
 @each $key, $val in $spica-outline {
   .outline-#{$key} {
     outline: $val;
   }
 }
 
-// Focus states only
+// Focus-only outline styles
 @each $key, $val in $spica-outline {
   .focus\:outline-#{$key}:focus {
     outline: $val;
   }
 }
 
+// Outline color classes (handle both flat and nested maps)
+@each $color-name, $color-value in $spica-colors {
+  $color-key: "" + $color-name;
 
+  @if meta.type-of($color-value) == "map" {
+    @each $shade, $hex in $color-value {
+      $shade-key: "" + $shade;
 
+      .outline-color-#{$color-key}-#{$shade-key} {
+        outline-color: $hex;
+      }
+
+      .focus\:outline-color-#{$color-key}-#{$shade-key}:focus {
+        outline-color: $hex;
+      }
+    }
+  } @else {
+    .outline-color-#{$color-key} {
+      outline-color: $color-value;
+    }
+
+    .focus\:outline-color-#{$color-key}:focus {
+      outline-color: $color-value;
+    }
+  }
+}
+
+// Responsive + focus outline styles
+@each $breakpoint, $size in $spica-breakpoints {
+  @media (min-width: #{$size}) {
+    @each $key, $val in $spica-outline {
+      .#{$breakpoint}\:outline-#{$key} {
+        outline: $val;
+      }
+      .#{$breakpoint}\:focus\:outline-#{$key}:focus {
+        outline: $val;
+      }
+    }
+
+    @each $color-name, $color-value in $spica-colors {
+      $color-key: "" + $color-name;
+
+      @if meta.type-of($color-value) == "map" {
+        @each $shade, $hex in $color-value {
+          $shade-key: "" + $shade;
+
+          .#{$breakpoint}\:outline-color-#{$color-key}-#{$shade-key} {
+            outline-color: $hex;
+          }
+
+          .#{$breakpoint}\:focus\:outline-color-#{$color-key}-#{$shade-key}:focus {
+            outline-color: $hex;
+          }
+        }
+      } @else {
+        .#{$breakpoint}\:outline-color-#{$color-key} {
+          outline-color: $color-value;
+        }
+
+        .#{$breakpoint}\:focus\:outline-color-#{$color-key}:focus {
+          outline-color: $color-value;
+        }
+      }
+    }
+  }
+}
