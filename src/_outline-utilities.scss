@@ -2,7 +2,7 @@
 
 $spica-outline: (
   0: 0,
-  default: 2px solid currentColor
+  default: 1px solid currentColor
 );
 
 // Base outline classes
@@ -12,7 +12,7 @@ $spica-outline: (
   }
 }
 
-// Focus states only (common for accessibility)
+// Focus states only
 @each $key, $val in $spica-outline {
   .focus\:outline-#{$key}:focus {
     outline: $val;
