@@ -37109,6 +37109,40 @@
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
+.hover\:underline:hover {
+  text-decoration: underline;
+}
+
+.hover\:line-through:hover {
+  text-decoration: line-through;
+}
+
+.hover\:no-underline:hover {
+  text-decoration: none;
+}
+
+.hover\:text-outline:hover {
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.focus\:underline:focus {
+  text-decoration: underline;
+}
+
+.focus\:line-through:focus {
+  text-decoration: line-through;
+}
+
+.focus\:no-underline:focus {
+  text-decoration: none;
+}
+
+.focus\:text-outline:focus {
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
 @media (min-width: 640px) {
   .sm\:underline {
     text-decoration: underline;
@@ -37120,6 +37154,32 @@
     text-decoration: none;
   }
   .sm\:text-outline {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+  .sm\:hover\:underline:hover {
+    text-decoration: underline;
+  }
+  .sm\:hover\:line-through:hover {
+    text-decoration: line-through;
+  }
+  .sm\:hover\:no-underline:hover {
+    text-decoration: none;
+  }
+  .sm\:hover\:text-outline:hover {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+  .sm\:focus\:underline:focus {
+    text-decoration: underline;
+  }
+  .sm\:focus\:line-through:focus {
+    text-decoration: line-through;
+  }
+  .sm\:focus\:no-underline:focus {
+    text-decoration: none;
+  }
+  .sm\:focus\:text-outline:focus {
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
   }
@@ -37138,6 +37198,32 @@
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
   }
+  .md\:hover\:underline:hover {
+    text-decoration: underline;
+  }
+  .md\:hover\:line-through:hover {
+    text-decoration: line-through;
+  }
+  .md\:hover\:no-underline:hover {
+    text-decoration: none;
+  }
+  .md\:hover\:text-outline:hover {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+  .md\:focus\:underline:focus {
+    text-decoration: underline;
+  }
+  .md\:focus\:line-through:focus {
+    text-decoration: line-through;
+  }
+  .md\:focus\:no-underline:focus {
+    text-decoration: none;
+  }
+  .md\:focus\:text-outline:focus {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
 }
 @media (min-width: 1024px) {
   .lg\:underline {
@@ -37150,6 +37236,32 @@
     text-decoration: none;
   }
   .lg\:text-outline {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+  .lg\:hover\:underline:hover {
+    text-decoration: underline;
+  }
+  .lg\:hover\:line-through:hover {
+    text-decoration: line-through;
+  }
+  .lg\:hover\:no-underline:hover {
+    text-decoration: none;
+  }
+  .lg\:hover\:text-outline:hover {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+  .lg\:focus\:underline:focus {
+    text-decoration: underline;
+  }
+  .lg\:focus\:line-through:focus {
+    text-decoration: line-through;
+  }
+  .lg\:focus\:no-underline:focus {
+    text-decoration: none;
+  }
+  .lg\:focus\:text-outline:focus {
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
   }
@@ -37168,6 +37280,32 @@
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
   }
+  .xl\:hover\:underline:hover {
+    text-decoration: underline;
+  }
+  .xl\:hover\:line-through:hover {
+    text-decoration: line-through;
+  }
+  .xl\:hover\:no-underline:hover {
+    text-decoration: none;
+  }
+  .xl\:hover\:text-outline:hover {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+  .xl\:focus\:underline:focus {
+    text-decoration: underline;
+  }
+  .xl\:focus\:line-through:focus {
+    text-decoration: line-through;
+  }
+  .xl\:focus\:no-underline:focus {
+    text-decoration: none;
+  }
+  .xl\:focus\:text-outline:focus {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
 }
 @media (min-width: 1536px) {
   .bp-2xl\:underline {
@@ -37180,6 +37318,32 @@
     text-decoration: none;
   }
   .bp-2xl\:text-outline {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+  .bp-2xl\:hover\:underline:hover {
+    text-decoration: underline;
+  }
+  .bp-2xl\:hover\:line-through:hover {
+    text-decoration: line-through;
+  }
+  .bp-2xl\:hover\:no-underline:hover {
+    text-decoration: none;
+  }
+  .bp-2xl\:hover\:text-outline:hover {
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  }
+  .bp-2xl\:focus\:underline:focus {
+    text-decoration: underline;
+  }
+  .bp-2xl\:focus\:line-through:focus {
+    text-decoration: line-through;
+  }
+  .bp-2xl\:focus\:no-underline:focus {
+    text-decoration: none;
+  }
+  .bp-2xl\:focus\:text-outline:focus {
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
   }

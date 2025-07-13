@@ -1,19 +1,20 @@
 @use 'breakpoints' as *;
 
+$spica-states: (
+  hover: ":hover",
+  focus: ":focus"
+);
+
 // Base text decoration utilities
 .underline {
   text-decoration: underline;
 }
-
 .line-through {
   text-decoration: line-through;
 }
-
 .no-underline {
   text-decoration: none;
 }
-
-// Optional: Custom outline effect using text-shadow
 .text-outline {
   color: white;
   text-shadow:
@@ -23,7 +24,28 @@
      1px  1px 0 black;
 }
 
-// Responsive variants
+// State variants (hover, focus)
+@each $state, $pseudo in $spica-states {
+  .#{$state}\:underline#{$pseudo} {
+    text-decoration: underline;
+  }
+  .#{$state}\:line-through#{$pseudo} {
+    text-decoration: line-through;
+  }
+  .#{$state}\:no-underline#{$pseudo} {
+    text-decoration: none;
+  }
+  .#{$state}\:text-outline#{$pseudo} {
+    color: white;
+    text-shadow:
+      -1px -1px 0 black,
+       1px -1px 0 black,
+      -1px  1px 0 black,
+       1px  1px 0 black;
+  }
+}
+
+// Responsive + state variants
 @each $breakpoint, $size in $spica-breakpoints {
   @media (min-width: #{$size}) {
     .#{$breakpoint}\:underline {
@@ -42,6 +64,26 @@
          1px -1px 0 black,
         -1px  1px 0 black,
          1px  1px 0 black;
+    }
+
+    @each $state, $pseudo in $spica-states {
+      .#{$breakpoint}\:#{$state}\:underline#{$pseudo} {
+        text-decoration: underline;
+      }
+      .#{$breakpoint}\:#{$state}\:line-through#{$pseudo} {
+        text-decoration: line-through;
+      }
+      .#{$breakpoint}\:#{$state}\:no-underline#{$pseudo} {
+        text-decoration: none;
+      }
+      .#{$breakpoint}\:#{$state}\:text-outline#{$pseudo} {
+        color: white;
+        text-shadow:
+          -1px -1px 0 black,
+           1px -1px 0 black,
+          -1px  1px 0 black,
+           1px  1px 0 black;
+      }
     }
   }
 }
