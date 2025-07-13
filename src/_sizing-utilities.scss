@@ -1,0 +1,41 @@
+@use 'breakpoints' as *;
+
+$spacing-scale: (
+  0: 0rem,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  8: 2rem,
+  10: 2.5rem,
+  12: 3rem,
+  16: 4rem,
+  20: 5rem,
+  24: 6rem
+);
+
+// Base sizing utilities
+@each $key, $value in $spacing-scale {
+  .w-#{$key} {
+    width: $value;
+  }
+  .h-#{$key} {
+    height: $value;
+  }
+}
+
+// Responsive sizing utilities
+@each $breakpoint, $size in $spica-breakpoints {
+  @media (min-width: #{$size}) {
+    @each $key, $value in $spacing-scale {
+      .#{$breakpoint}\:w-#{$key} {
+        width: $value;
+      }
+      .#{$breakpoint}\:h-#{$key} {
+        height: $value;
+      }
+    }
+  }
+}
